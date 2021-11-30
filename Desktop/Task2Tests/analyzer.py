@@ -31,15 +31,13 @@ def analyzer(text):
     for s in sentences:
         if ',' in s:
             count_comma += 1
-    return f'Text contains: {characters_counter} characters, {words_counter} words, ' \
-           f'{sentences_counter} \
-    sentences, {dot} sentences with dot, {exclamation_mark} \
-    sentences with exclamation mark, {question_mark} sentences \
-    with question mark, {count_comma} sentences with one or more comma, \
-    you need {time}  min to reed it.'
+    return f"""Text contains:\n
+{characters_counter} characters, {words_counter} words, {sentences_counter} sentences,\n
+{dot} sentences with dot, {exclamation_mark} sentences with exclamation mark,\n
+{question_mark} sentences with question mark,\n
+{count_comma} sentences with one or more comma, you need {time}  min to read it."""
 
 
 if __name__ == '__main__':
     analyzer("What Is an Example of an API?")
-
 
